@@ -1,5 +1,7 @@
 package Runner;
 
+import solutions.Day;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,9 +24,13 @@ public class PuzzleInput {
 
     private static final String URL_TEMPLATE = "https://adventofcode.com/2023/day/%s/input";
 
+    private static final String DAY_TEMPLATE = "src/main/resources/day%s.txt";
+    private static final String TEST_TEMPLATE = "src/main/resources/test%s.txt";
+
     public static List<String> getPuzzleInput(String day) {
 
-        final String fileName = String.format("src/main/resources/day%s.txt", padWithZeros(Integer.parseInt(day), 2));
+        final String template = System.getenv("TEST") == null ? DAY_TEMPLATE : TEST_TEMPLATE;
+        final String fileName = String.format(template, padWithZeros(Integer.parseInt(day), 2));
         final File f = new File(fileName);
 
         if (!f.isFile()) {
