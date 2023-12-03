@@ -64,6 +64,7 @@ public class PuzzleInput {
     }
 
     private static List<String> getInputFromFile(File file) throws IOException {
+        logger.log(Level.INFO, "Getting puzzle input from file");
         final FileInputStream fileInputStream = new FileInputStream(file);
         final InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
         try (BufferedReader reader = new BufferedReader(inputStreamReader)) {
@@ -72,6 +73,7 @@ public class PuzzleInput {
     }
 
     private static List<String> getInputFromURL(String day) throws IOException {
+        logger.log(Level.INFO, "Getting puzzle input from URL");
         final URL url = new URL(String.format(URL_TEMPLATE, day));
         final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
