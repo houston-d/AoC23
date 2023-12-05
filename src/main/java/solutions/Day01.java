@@ -49,10 +49,10 @@ public class Day01 implements Day {
 
 
     private static int extractDigits(String inputString) {
-        Pattern pattern = Pattern.compile("\\d+");
-        Matcher matcher = pattern.matcher(inputString);
+        final Pattern pattern = Pattern.compile("\\d+");
+        final Matcher matcher = pattern.matcher(inputString);
 
-        StringBuilder result = new StringBuilder();
+        final StringBuilder result = new StringBuilder();
 
         while (matcher.find()) {
             result.append(matcher.group());
