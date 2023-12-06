@@ -57,7 +57,7 @@ public class Day05 implements Day {
                 logger.log(Answer.ANSWER, String.valueOf(currentLocation));
                 System.exit(0);
             }
-            
+
             currentLocation += 1L;
         }
     }
