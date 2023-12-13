@@ -5,7 +5,6 @@ import Runner.Answer;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static java.lang.Math.*;
@@ -65,7 +64,7 @@ public class Day11 implements Day {
                     break;
                 }
             }
-            
+
             if (!hasGalaxy) {
                 indicesToExpand.add(i);
             }
